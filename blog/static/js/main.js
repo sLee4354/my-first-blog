@@ -130,11 +130,13 @@ function addSubmit() {
     return false;
 }
 function addModal() {
-    var addPopup = document.getElementById('add');
-    add.style.display = 'block';
-    window.onclick = function (event) {
-        if (event.target == addPopup) {
-            addPopup.style.display = "none";
-        }
-    };
+    window.location = "admin";
+    return false;
+    //var addPopup = document.getElementById('add');
+    //add.style.display = 'block';
+    //window.onclick = function (event) {
+    //    if (event.target == addPopup) {
+    //        addPopup.style.display = "none";
+    //    }
+    //};
 }

@@ -32,26 +32,26 @@
             <table style="width:100%">
                 <!--filter list-->
                 <tr>
-                    <th align="left"><span class="label p11">filter</span></th>
-                    <th align="left">
+                    <!--<th align="left"><span class="label p11">filter</span></th>-->
+                    <th align="left" style="width:33%;">
                         <!--type select-->
                         <div>
                             <span class="label p11">Type</span>
-                            <select id="dropdown_type">
+                            <!--<select id="dropdown_type">
                                 <option value="grocery">Grocery</option>
                                 <option value="office">Office Supply</option>
                                 <option value="electonic">Electonic</option>
                                 <option value="movie">Movie</option>
-                            </select>
+                            </select>-->
                         </div>
                     </th>
-                    <th align="left"><span class="label p11">location </span>
-                    <input id="Text1" type="text" /></th>
-                    <th align="left">
+                    <th align="left" style="width:33%;"><span class="label p11">location </span>
+                    <!--<input id="Text1" type="text" /></th>-->
+                    <th align="center" style="width:33%;">
                         <!--month select-->
                         <div>
                             <span class="label p11">month</span>
-                            <select id="dropdown_type">
+                            <!--<select id="dropdown_type">
                                 <option value="1">JANUARY</option>
                                 <option value="2">FEBUARY</option>
                                 <option value="3">MARCH</option>
@@ -65,6 +65,7 @@
                                 <option value="11">NOVEMBER</option>
                                 <option value="12">DECEMBER</option>
                             </select>
+                            -->
                         </div>
                     </th>
                 </tr>
@@ -73,37 +74,14 @@
             <hr />
             <!--transaction start-->
             <div>
-                <table style="width:100%">
-                    <!--list title-->
+                <table style="width:100%;">
+                    {% for post in posts %}
                     <tr>
-                        <th align="left"><span class="label p11">Transaction Types</span></th>
-                        <th align="left"><span class="label p11">Location</span></th>
-                        <th align="left"><span class="label p11">Date</span></th>
+                        <td style="width:33%;"><p>{{ post.title }}</p></td>
+                        <td style="width:33%;"><p>{{ post.text|linebreaksbr }}</p></td>
+                        <td style="width:33%; text-align:center;"><p>{{ post.published_date }}</p></td>
                     </tr>
-                    <!--list1-->
-                    <tr>
-                        <td align="left"><span class="label p11 capital_upper">Grocery</span></td>
-                        <td align="left"><span class="label p11 capital_upper">Sobey, Waterloo</span></td>
-                        <td align="left"><span class="label p11 capital_upper">02-01-2018</span></td>
-                    </tr>
-                    <!--list2-->
-                    <tr>
-                        <td align="left"><span class="label p11 capital_upper">Office Supply</span></td>
-                        <td align="left"><span class="label p11 capital_upper">Stables, Kitchener</span></td>
-                        <td align="left"><span class="label p11 capital_upper">09-01-2018</span></td>
-                    </tr>
-                    <!--list3-->
-                    <tr>
-                        <td align="left"><span class="label p11 capital_upper">Electonic</span></td>
-                        <td align="left"><span class="label p11 capital_upper">Best Buy, Cambridge</span></td>
-                        <td align="left"><span class="label p11 capital_upper">17-01-2018</span></td>
-                    </tr>
-                    <!--list4-->
-                    <tr>
-                        <td align="left"><span class="label p11 capital_upper">Movie</span></td>
-                        <td align="left"><span class="label p11 capital_upper">Walmart, Waterloo</span></td>
-                        <td align="left"><span class="label p11 capital_upper">03-02-2018</span></td>
-                    </tr>
+                    {% endfor %}
                 </table>
             </div>
             <!--transaction end-->
