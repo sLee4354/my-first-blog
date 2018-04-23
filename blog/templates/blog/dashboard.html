@@ -10,14 +10,23 @@
     <div class="background">
         <form class="container width_dashboard" name="dashboard">
             <div class="title p26">Dash Board</div>
-            <!--Add button start-->
-            <div>
-                <div class="container_btn btn_small" id="btn_addModal" onclick="addModal();">
-                    <div class="color_btn"></div>
-                    <button class="txt_btn" type="button">Add</button>
-                </div>
-            </div>
-            <!--Add button end-->
+            <table style="width:100%;">
+                <tr>
+                    <td style="width:50%;">
+                        <div class="container_btn btn_small" id="btn_addModal" onclick="addModal();" style="width:30%;">
+                            <div class="color_btn"></div>
+                            <button class="txt_btn" type="button">Add</button>
+                        </div>  
+                    </td>
+                    <td style="width:50%;">
+                        <div class="container_btn btn_small" id="btn_logoutModal" onclick="logoutSubmit();" style="width:30%; margin-left:70%;">
+                            <div class="color_btn"></div>
+                            <button class="txt_btn" type="button">Log Out</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            
             <hr />
             <!--filter start-->
             <table style="width:100%">

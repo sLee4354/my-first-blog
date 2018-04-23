@@ -105,6 +105,10 @@ function loginSubmit() {
     }
     return false;
 }
+function logoutSubmit() {
+    window.location = "home";
+    return false;
+}
 //add transaction
 function addSubmit() {
     description = document.getElementById("description").value;
